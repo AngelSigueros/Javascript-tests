@@ -4,23 +4,26 @@ const frutas = ["manzana", "plátano", "naranja"];
 frutas.push("fresa");
 frutas.shift();
 console.log(`Longitud del array: ${frutas.length}`);
+console.log(frutas);
 
 
 // Iterar sobre un Array
 
-const numeros = [1, 2, 3, 4, 5];
+const numeros = [10, 20, 30, 40, 50];
+
 for (let i = 0; i < numeros.length; i++) {
-  console.log(numeros[i]);
+    console.log(numeros[i]);
 }
 for (const numero of numeros) {
-  console.log(numero);
+    console.log(numero);
 }
 // for in
 for (const indice in numeros) {
-  console.log(numeros[indice]);
+    console.log(numeros[indice]);
 }
 // forEach
 numeros.forEach(numero => console.log(numero));
+
 
 
 // Uso de map, filter y reduce en Arrays
@@ -28,9 +31,9 @@ numeros.forEach(numero => console.log(numero));
 const calificaciones = [85, 90, 78, 92, 88];
 const calificacionesAumentadas = calificaciones.map(calificacion => calificacion + 5);
 const calificacionesAltas = calificacionesAumentadas.filter(calificacion =>
-calificacion >= 90);
+    calificacion >= 90);
 const promedio = calificaciones.reduce((total, calificacion) => total + calificacion,
-0) / calificaciones.length;
+    0) / calificaciones.length;
 console.log(calificacionesAumentadas);
 console.log(calificacionesAltas);
 console.log(`Promedio: ${promedio}`);
@@ -39,15 +42,15 @@ console.log(`Promedio: ${promedio}`);
 // Crear y manipular un Objeto
 
 const persona = {
-  nombre: "Juan",
-  apellido: "Pérez",
-  edad: 30,
-  ciudad: "Madrid"
+    nombre: "Juan",
+    apellido: "Pérez",
+    edad: 30,
+    ciudad: "Madrid"
 };
 persona.ciudad = "Barcelona";
 persona.ocupacion = "programador";
 for (const propiedad in persona) {
-  console.log(`${propiedad}: ${persona[propiedad]}`);
+    console.log(`${propiedad}: ${persona[propiedad]}`);
 }
 
 
@@ -55,31 +58,30 @@ for (const propiedad in persona) {
 
 const nombres = new Set();
 nombres.add("Pedro");
-2
 nombres.add("María");
 nombres.add("Carlos");
 nombres.add("Pedro"); // No se duplicará
+console.log(`${nombres.values}`);
 console.log(`Cantidad de elementos en el Set: ${nombres.size}`);
 for (const nombre of nombres) {
-  console.log(nombre);
+    console.log(nombre);
 }
 
 
 // Crear y utilizar un Map
 
 const capitales = new Map([
-  ["España", "Madrid"],
-  ["Francia", "París"],
-  ["Italia", "Roma"]
+    ["España", "Madrid"],
+    ["Francia", "París"],
+    ["Italia", "Roma"]
 ]);
 capitales.set("Alemania", "Berlín");
 console.log(capitales.get("España"));
 for (const [pais, capital] of capitales) {
-  console.log(`${pais}: ${capital}`);
+    console.log(`${pais}: ${capital}`);
 }
 /*
-  Utiliza for in cuando necesit
-es iterar sobre las propiedades de un objeto y conocer tanto las claves como los
+  Utiliza for in cuando necesites iterar sobre las propiedades de un objeto y conocer tanto las claves como los
 valores.
   Utiliza for of cuando necesites iterar sobre elementos de objetos iterables como
 arrays, strings, sets o mapas y solo te interesen los valores.

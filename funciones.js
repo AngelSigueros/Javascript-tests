@@ -91,4 +91,4 @@ function crearMultiplicador(factor) {
     calcularCuadrado = numero => numero * numero;
 
     console.log(calcularCuadrado(11));
-      
+    
