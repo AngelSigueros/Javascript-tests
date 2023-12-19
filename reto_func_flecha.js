@@ -35,3 +35,14 @@ const objeto2 = {
     }
 };
 objeto2.mostrarNombre();
+
+const objeto3 = {
+    nombre: "John333",
+    mostrarNombre: () => {
+      const self = this;
+      const mostrar = () => {
+        console.log(self.nombre);
+      };
+    }
+  };
+// console.log(objeto3.mostrarNombre().mostrar());  // Mostrará "John"
